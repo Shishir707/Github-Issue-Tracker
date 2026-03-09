@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
     <title>Github Issue Tracker</title>
 
 </head>
@@ -23,16 +24,18 @@
             <legend class="fieldset-legend">Login</legend>
 
             <label class="label text-base-content text-sm font-semibold">Username</label>
-            <input type="text" class="input mb-4" placeholder="Enter Username" />
+            <input type="text" id="username" class="input mb-4" placeholder="Enter Username" />
 
             <label class="label text-base-content text-sm font-semibold">Password</label>
-            <input type="password" class="input mb-8" placeholder="Enter Password" />
+            <input type="password" id="password" class="input mb-8" placeholder="Enter Password" />
 
 
             <button class="btn btn-primary" onclick="signInButton()">Sign In</button>
         </fieldset>
 
     </div>
+
+    <script src="scripts/login.js"></script>
 
 </body>
 
