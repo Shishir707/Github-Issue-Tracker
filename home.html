@@ -44,7 +44,7 @@
             <div class="flex items-center gap-4">
                 <img src="./assets/Aperture.png" alt="Aperture Logo" class="w-12 h-12 rounded-full shadow-violet-500" />
                 <div>
-                    <h2 class="text-xl font-bold">50 Issues</h2>
+                    <h2 class="text-xl font-bold"><span id="issueCount">0</span> Issues</h2>
                     <p class="text-sm text-gray-400">Track and manage your project issues</p>
                 </div>
             </div>
@@ -55,6 +55,33 @@
             </div>
         </div>
     </div>
+
+
+    <div class="p-2 md:p-4 mt-4 w-5/6 bg-white mx-auto gap-4 rounded-md shadow-md">
+        <div id="showItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+
+
+    <!-- <div class="p-2 md:p-4 mt-4 w-5/6 bg-white mx-auto gap-4 rounded-md shadow-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+            <div class="flex justify-between">
+                <img src="./assets/Open-Status.png" alt="open status" class="w-4 h-4 rounded-full shadow-green-500" />
+                <p class="bg-red-100 rounded-md shadow-md text-red-600 px-3">HIGH</p>
+            </div>
+
+            <h2 class="text-xl font-semibold">Issue Title</h2>
+            <p class="text-gray-600">Issue description goes here...</p>
+            <div class="flex gap-2 mt-4">
+                <p class="bg-red-100 rounded-xl shadow-md text-red-600 px-3">BUG</p>
+                <p class="bg-yellow-100 rounded-xl shadow-md text-yellow-600 px-3">HELP WANTED</p>
+            </div>
+            <hr class="mt-4 text-gray-400 shadow-md">
+            <p class="text-sm text-gray-500 mt-2">By John Doe</p>
+            <p class="text-sm text-gray-500 mt-2">2023-10-01</p>
+        </div>
+    </div> -->
+
+    <script src="scripts/items.js"></script>
 
 </body>
 
