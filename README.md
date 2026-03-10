@@ -6,43 +6,43 @@
     - 5️⃣ What are template literals?
 
 
-**1**
+## 1️⃣ Variables
 
-  Var 
-Old way to declare variables.
-Can change value.
-Can declare again.
+  **`Var`** 
+- Old way to declare variables.
+- Can change value.
+- Can declare again.
 
-  let
-New way in ES6
-Can change value.
-Cannot declare again in the same scope.
-Works inside a block.
+  **`let`**
+- New way in ES6
+- Can change value.
+- Cannot declare again in the same scope.
+- Works inside a block.
  
-  const 
-Value cannot change after declaration.
-Must give a value when creating it.
-Works inside a block {} 
+  **`const`** 
+- Value cannot change after declaration.
+- Must give a value when creating it.
+- Works inside a block {} 
 
 
-**2**
+## 2️⃣ Spread Operator
 
-To use expands values from an array/object into another array/object.
+- To use expands values from an array/object into another array/object.
 
-**3**
+## 3️⃣ Array Methods
 
-map() : changes elements and returns a new array
-filter() : selects elements and returns a new array
-forEach() : run loops, returns nothing , get every element
+- **`map()`** : changes elements and returns a new array
+- **`filter()`**  : selects elements and returns a new array
+- **`forEach()`**: run loops, returns nothing , get every element
 
 
-**4**
+## 4️⃣ Arrow Functions
 
-In ES6 array function is a short version to write js function.
+- In ES6 array function is a short version to write js function.
 
-**4**
+## 5️⃣ Template Literals
 
-Its a way to write variables in a string with backtiks ${} into it.
+- Its a way to write variables in a string with backtiks ${} into it.
 
 
 
