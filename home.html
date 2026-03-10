@@ -13,7 +13,7 @@
     <title>Github Issue Tracker : Home</title>
 </head>
 
-<body>
+<body class="bg-base-300">
     <header>
         <div class="navbar bg-base-100 shadow-sm px-4 md:px-8">
             <div class="flex-1">
@@ -28,11 +28,36 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" id="searchText" placeholder="Search Issues" class="grow" />
                 </label>
-                <button class="btn btn-primary">+ New Issue</button>
+                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
             </div>
         </div>
     </header>
 
+    <div class="p-8 md:p-10 mt-8 w-5/6 bg-white mx-auto gap-4 rounded-md shadow-md">
+        <button type="submit" class="btn">All</button>
+        <button type="submit" class="btn">Open</button>
+        <button type="submit" class="btn">Closed</button>
+    </div>
+
+    <div class="p-2 md:p-4 mt-4 w-5/6 bg-white mx-auto gap-4 rounded-md shadow-md">
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4">
+                <img src="./assets/Aperture.png" alt="Aperture Logo" class="w-12 h-12 rounded-full shadow-violet-500" />
+                <div>
+                    <h2 class="text-xl font-bold">50 Issues</h2>
+                    <p class="text-sm text-gray-400">Track and manage your project issues</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 ml-auto">
+                <p>🟢 Open</p>
+                <p>🟣 Closed</p>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+
 
 </html>
