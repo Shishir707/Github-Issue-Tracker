@@ -127,3 +127,85 @@ searchInput.addEventListener("input", () => {
             displayItems(searchResults);
         });
 });
+
+
+// For show Dialog Box
+function showDialog(id) {
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const item = data.data;
+            console.log(item);
+
+            const statusColors = {
+                open: "bg-green-400",
+                closed: "bg-purple-400"
+            };
+
+
+            const priorityColors = {
+                high: "bg-red-100 text-red-600",
+                medium: "bg-yellow-100 text-yellow-600",
+                low: "bg-gray-100 text-gray-600"
+            };
+
+            const labelColors = {
+                bug: "bg-red-100 text-red-600",
+                "help wanted": "bg-yellow-100 text-yellow-600",
+                enhancement: "bg-green-100 text-green-600"
+            };
+
+            const dialog = document.createElement("dialog");
+            dialog.classList.add("modal");
+
+            dialog.innerHTML = `
+                <div class="modal-box">
+                    <h3 class="text-lg font-bold mb-2">${item.title}</h3>
+
+                    <div class="flex gap-2 items-center">
+                        <p class="px-4 rounded-xl text-sm ${statusColors[item.status]}">
+                            ${item.status.toUpperCase()}
+                        </p>
+                        <p class="text-gray-400 text-sm">- Opened by <span>${item.author}</span></p>
+                        <p class="text-gray-400 text-sm">- ${new Date(item.updatedAt).toLocaleDateString()}</p>
+                    </div>
+
+                    <div class="label flex gap-2 mt-4 items-center">
+                        ${item.labels.map(label => `
+                            <p class="px-3 rounded-xl shadow-md text-sm ${labelColors[label.toLowerCase()] || 'bg-gray-100 text-gray-600'}">
+                                ${label.toUpperCase()}
+                            </p>
+                        `).join("")}
+                    </div>
+
+                    <p class="py-4 text-gray-500">${item.description}</p>
+
+                    <div>
+                        <div class="flex gap-4 justify-evenly">
+                            <p class="text-gray-400 text-sm">Assignee:</p>
+                            <p class="text-gray-400 text-sm">Priority:</p>
+                        </div>
+                        <div class="flex gap-4 justify-evenly">
+                            <p class="text-sm font-semibold">${item.assignee || "Unassigned"}</p>
+                            <p class="text-sm font-semibold ${priorityColors[item.priority]}">${item.priority.toUpperCase()}</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(dialog);
+            dialog.showModal();
+
+            dialog.addEventListener("close", () => dialog.remove());
+        });
+}
+
+showDialog(1);
