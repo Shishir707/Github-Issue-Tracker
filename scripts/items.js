@@ -112,3 +112,18 @@ const displayItems = (Items) => {
         itemsContainer.appendChild(itemElement);
     });
 }
+
+
+// For Search Functionality
+const searchInput = document.getElementById("searchText");
+searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchTerm}`;
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const searchResults = data.data;
+            displayItems(searchResults);
+        });
+});
