@@ -94,7 +94,7 @@ const displayItems = (Items) => {
             `<div>
                     <div class="flex justify-between">
                         <img src="${imageLinks[item.status]}" alt="open status" class="w-6 h-6 rounded-full" />
-                        <p class="${colors[item.priority]} px-4 rounded-md"">${item.priority.toUpperCase()}</p>
+                        <button class="${colors[item.priority]} px-4 rounded-md" onclick="showDialog(${item.id})">${item.priority.toUpperCase()}</button>
                     </div>
 
                     <h2 class="text-xl font-semibold">${item.title}</h2>
@@ -208,4 +208,4 @@ function showDialog(id) {
         });
 }
 
-showDialog(1);
+// showDialog(1);
