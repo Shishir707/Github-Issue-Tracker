@@ -19,17 +19,17 @@
         <div class="navbar bg-base-100 shadow-sm px-4 md:px-8">
             <div class="flex-1">
                 <div class="flex">
-                    <img src="./assets/github-logo.png" alt="Github Logo" class="w-8 h-8 mr-2" />
-                    <a class="text-xl font-bold">Github Issue Tracker</a>
+                    <img src="./assets/github-logo.png" alt="Github Logo" class="w-4 md:w-8 h-4 md:h-8 mr-2" />
+                    <a class="text-sm md:text-xl font-bold ">Github Issue Tracker</a>
 
                 </div>
             </div>
             <div class="flex gap-2">
-                <label class="input input-bordered flex items-center gap-2 w-24 md:w-auto">
+                <label class="input input-bordered flex items-center gap-2 w-12 md:w-auto">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" id="searchText" placeholder="Search Issues" class="grow" />
                 </label>
-                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
+                <button class="btn btn-primary w-4 md:w-auto"><i class="fa-solid fa-plus"></i> New Issue</button>
             </div>
         </div>
     </header>
@@ -45,14 +45,14 @@
             <div class="flex items-center gap-4">
                 <img src="./assets/Aperture.png" alt="Aperture Logo" class="w-12 h-12 rounded-full shadow-violet-500" />
                 <div>
-                    <h2 class="text-xl font-bold"><span id="issueCount">0</span> Issues</h2>
-                    <p class="text-sm text-gray-400">Track and manage your project issues</p>
+                    <h2 class="text-sm md:text-xl font-bold"><span id="issueCount">0</span> Issues</h2>
+                    <p class="text-sm md:text-md text-gray-400">Track and manage your project issues</p>
                 </div>
             </div>
 
             <div class="flex items-center gap-4 ml-auto">
-                <p>🟢 Open</p>
-                <p>🟣 Closed</p>
+                <p class="text-sm md:text-lg">🟢 Open</p>
+                <p class="text-sm md:text-lg">🟣 Closed</p>
             </div>
         </div>
     </div>
