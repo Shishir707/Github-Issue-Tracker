@@ -195,7 +195,7 @@ function showDialog(id) {
 
                     <div class="modal-action">
                         <form method="dialog">
-                            <button class="btn">Close</button>
+                            <button class="btn btn-primary">Close</button>
                         </form>
                     </div>
                 </div>
