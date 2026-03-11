@@ -60,6 +60,8 @@ const displayItems = (Items) => {
     const itemsContainer = document.getElementById("showItems");
     itemsContainer.innerHTML = "";
 
+    document.getElementById("loader").classList.add("hidden");
+
     const issueCount = document.getElementById("issueCount");
 
     issueCount.textContent = Items.length;
